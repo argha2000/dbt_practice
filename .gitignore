@@ -1,0 +1,25 @@
+# dbt-specific
+target/
+dbt_packages/
+logs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+*.py[cod]
+.env
+.lock
+# Environment & locks
+uv.lock
+
+# IDE
+.vscode/
+
+
+# System
+.DS_Store
+Thumbs.db
