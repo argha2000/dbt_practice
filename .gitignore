@@ -23,3 +23,5 @@ uv.lock
 # System
 .DS_Store
 Thumbs.db
+
+/dbt_project/profiles.yml
