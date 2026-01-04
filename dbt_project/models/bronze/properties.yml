@@ -40,3 +40,10 @@ models:
                     "MegaMart San Jose",
                     "MegaMart Toronto",
                   ]
+              config:
+                severity: warn
+      - name: country
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["USA", "Canada"]
