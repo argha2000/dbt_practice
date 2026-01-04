@@ -1,16 +1,7 @@
 version: 2
 
 models:
-  - name: bronze_date #  Must match the filename of a model -- including case sensitivity.
-<<<<<<< HEAD:dbt_project/models/bronze/properties.yml
-    config:
-      materialized: view
-
-  - name: bronze_prpduct
-    config:
-      materialized: view
-=======
-
+  - name: bronze_date
     config:
       materialized: view
       schema: bronze
@@ -49,4 +40,3 @@ models:
                     "MegaMart San Jose",
                     "MegaMart Toronto",
                   ]
->>>>>>> 6ae3e6c (fixed spellings and added data tests):models/bronze/properties.yml
