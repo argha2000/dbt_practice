@@ -19,6 +19,10 @@ models:
         data_tests:
           - unique
           - not_null
+      - name: gross_amount
+        data_tests:
+          - generic_non_negative
+          #{ model: ref('bronze_sales'), column_name: "gross_amount" } -- this line is optional as the model and column_name are passed by default
 
   - name: bronze_store
     config:
