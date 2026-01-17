@@ -1,0 +1,17 @@
+{% set incre_flag = 1 %}
+{% set last_load_date = 3 %}
+{% set col_list = ["sales_id","date_sk","order_amount"] %}
+
+select 
+
+{% for i in col_list %}
+   {{ i }} {% if not loop.last %}, {% endif %}
+{% endfor %}
+
+from {{ ref("bronze_sales") }}
+
+{% if incre_flag == 1 %}
+
+   where date_sk > {{ last_load_date}}
+   
+{% endif %}
