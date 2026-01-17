@@ -1,6 +1,6 @@
 {% set incre_flag = 1 %}
 {% set last_load_date = 3 %}
-{% set col_list = ["sales_id","date_sk","order_amount"] %}
+{% set col_list = ["sales_id","date_sk","gross_amount"] %}
 
 select 
 
