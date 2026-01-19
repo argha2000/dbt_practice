@@ -18,9 +18,9 @@ cust as(
     select customer_sk,
             gender
     from {{ ref("bronze_customer") }}
-)
+),
 
-
+joined_query as (
 select sales.sales_id,
         sales.gross_amount,
         sales.payment_method,
@@ -30,3 +30,16 @@ select sales.sales_id,
 from  sales
 join cust on sales.customer_sk = cust.customer_sk
 join prod on sales.product_sk = prod.product_sk
+)
+
+select category,
+        gender,
+        sum(gross_amount) as total_sales_amt
+
+from 
+        joined_query
+
+group by  category,
+          gender    
+
+order by  total_sales_amt desc
